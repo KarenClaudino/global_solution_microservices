@@ -1,0 +1,10 @@
+<div class="evento-card" appHoverBorder="#FF5100">
+  <h3>{{ titulo }}</h3>
+  <p>Data: {{ data }}</p>
+  <p>Horário: {{ horario }}</p>
+  <p>Local: {{ local }}</p>
+  <button class="btn-participar" (click)="participar()">Participar</button>
+  @if (mensagemInscricao) {
+    <div class="mensagem-inscricao">{{ mensagemInscricao }}</div>
+  }
+</div>

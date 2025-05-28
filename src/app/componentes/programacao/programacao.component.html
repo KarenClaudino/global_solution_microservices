@@ -1,0 +1,21 @@
+<section class="programacao">
+  <div class="container">
+    <h1>{{ titulo }}</h1>
+    
+    <div class="eventos">
+      @for (evento of eventos; track evento.id) {
+        <app-evento-card
+          [titulo]="evento.titulo"
+          [data]="evento.data"
+          [horario]="evento.horario"
+          [local]="evento.local"
+          (participacaoEvent)="participar($event)"
+        ></app-evento-card>
+      }
+      
+      @if (mensagemInscricao) {
+        <div class="mensagem-inscricao">{{ mensagemInscricao }}</div>
+      }
+    </div>
+  </div>
+</section>
